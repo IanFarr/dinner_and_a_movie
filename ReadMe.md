@@ -13,6 +13,12 @@ selective criteria such as film genre and critical ratings. Food recommendations
 can also be narrowed by type and price.
 
 
+## Wireframes
+
+
+![wireframe](/assets/images/Homepage.png "Title")
+
+
 ## Functionality and MVPs
 
 With the app, users will be able to:
@@ -45,11 +51,14 @@ This project will be implemented with the following technologies:
 - **Friday Afternoon & Weekend:** Basic project setup. Further API research to
 undersand exactly what will be needed for functionality.
 
-- **Moday:** 
+- **Moday:** Focus on the film recommendation aspect. Ensure users can input
+streaming services and are provided with recommendations.
 
-- **Tuesday:** 
+- **Tuesday:** Focus on the food aspect. Ensure users can input their location
+and be provided with recommendations for nearby restaurants.
 
-- **Wednesday:** 
+- **Wednesday:** Combine all functionality in the interface. Make sure all
+necessary data is available and presented to the user.
 
 - **Thursday:** Finalize the styling and presentation of the app. Deploy to
 Github Pages.
