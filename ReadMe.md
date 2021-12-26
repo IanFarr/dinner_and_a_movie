@@ -26,3 +26,13 @@ In addition, the project will include
 
 - an **About** modal describing the functionality of the app
 - a production README
+
+
+## Technologies, Libraries, APIs
+
+This project will be implemented with the following technologies:
+
+- Google Geolocation API to provide nearby restaurants
+- Streaming Availability API to handle streaming options
+- Webpack and Babel to bundle and transpile the source JavaScript code
+- npm to manage project dependencies
