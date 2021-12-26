@@ -36,3 +36,20 @@ This project will be implemented with the following technologies:
 - Streaming Availability API to handle streaming options
 - Webpack and Babel to bundle and transpile the source JavaScript code
 - npm to manage project dependencies
+
+
+## Implementation Timeline
+
+**NB:**
+
+- **Friday Afternoon & Weekend:** Basic project setup. Further API research to
+undersand exactly what will be needed for functionality.
+
+- **Moday:** 
+
+- **Tuesday:** 
+
+- **Wednesday:** 
+
+- **Thursday:** Finalize the styling and presentation of the app. Deploy to
+Github Pages.
