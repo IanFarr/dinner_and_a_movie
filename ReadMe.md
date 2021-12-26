@@ -12,4 +12,17 @@ Further features will allow users to narrow the recommendations by providing
 selective criteria such as film genre and critical ratings. Food recommendations
 can also be narrowed by type and price.
 
+
 ## Functionality and MVPs
+
+With the app, users will be able to:
+
+- input subscribed streaming services
+- input geographical location
+- be provided with film/show recomendation
+- be provided with food recommendation
+
+In addition, the project will include
+
+- an **About** modal describing the functionality of the app
+- a production README
