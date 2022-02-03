@@ -1,5 +1,4 @@
 var axios = require("axios").default;
-// const key = process.env.STREAMING_AVAILABILITY_API_KEY
 
 var options = {
   method: 'GET',
@@ -15,13 +14,14 @@ var options = {
   },
   headers: {
     'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
-    'x-rapidapi-key': STREAMING_AVAILABILITY_API_KEY
+    'x-rapidapi-key': process.env.STREAMING_AVAILABILITY_API_KEY
   }
 };
 
 axios.request(options).then(function (response) {
-  const result = response.data.results[0];
-  printInfo(result);
+  console.log(response.data)
+  // const result = response.data.results[0];
+  // printInfo(result);
 }).catch(function (error) {
   console.error(error);
 });
@@ -33,4 +33,5 @@ function printInfo(result) {
 
   const info = `Title: ${[title]}, Description: ${[description]}, Poster: ${poster}`;
   console.log(info);
+
 }

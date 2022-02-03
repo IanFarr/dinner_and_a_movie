@@ -1,4 +1,4 @@
 # Ignore files related to API keys
 .env
 
-secrets.js
+node_modules
