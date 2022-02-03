@@ -7,7 +7,7 @@ var options = {
     country: 'us',
     service: 'netflix',
     type: 'movie',
-    genre: '18',
+    genre: '12',
     page: '1',
     output_language: 'en',
     language: 'en'
@@ -21,10 +21,17 @@ var options = {
 let result = null;
 
 axios.request(options).then(function (response) {
-  let result = response.data;
-  // console.log(response.data);
+  const result = response.data.results[0];
+  printInfo(result);
 }).catch(function (error) {
   console.error(error);
 });
 
-console.log(result)
+function printInfo(result) {
+  const title = result.title;
+  const description = result.overview;
+  const poster = result.posterURLs.original;
+
+  const info = `Title: ${[title]}, Description: ${[description]}, Poster: ${poster}`;
+  console.log(info);
+}
