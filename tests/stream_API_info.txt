@@ -41,3 +41,9 @@ Genres:
 '10763': 'News',
 '10764': 'Reality',
 '10767': 'Talk Show'
+
+The web app will allow users to input the streaming services they are subscribed to and their current location. It will then generate a random movie/tv show and a random nearby restaurant.
+
+Users may be able to further specify criteria such as film genre or restaurant price point to narrow their results.
+
+The app will utilize Google's Nearby Places API and the Streaming Availability API.

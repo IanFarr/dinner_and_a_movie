@@ -1,4 +1,5 @@
 var axios = require("axios").default;
+// const key = process.env.STREAMING_AVAILABILITY_API_KEY
 
 var options = {
   method: 'GET',
@@ -14,11 +15,9 @@ var options = {
   },
   headers: {
     'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
-    'x-rapidapi-key': '9a23aa3a4cmshb5e1031f9b08eb6p1e6b01jsn2e358cb79bfa'
+    'x-rapidapi-key': STREAMING_AVAILABILITY_API_KEY
   }
 };
-
-let result = null;
 
 axios.request(options).then(function (response) {
   const result = response.data.results[0];
