@@ -10,7 +10,7 @@
 
 <body>
 
-  <div id="title">
+  <div id="header">
     <h1>Dinner and a Movie</h1>
     <h2>because decisions are hard</h2>
   </div>
@@ -18,23 +18,69 @@
   <div id="stream_service_selection">
     <legend>which streaming servicise are you subscribed to:</legend>
 
-    <input type="radio" name="stream_service" id="netflix" value="netflix">
+    <input type="checkbox" name="stream_service" id="netflix" value="netflix">
     <label for="netflix">netflix</label>
 
-    <input type="radio" name="stream_service" id="prime" value="prime">
+    <input type="checkbox" name="stream_service" id="prime" value="prime">
     <label for="prime">prime</label>
 
-    <input type="radio" name="stream_service" id="hbo max" value="hbo max">
+    <input type="checkbox" name="stream_service" id="hbo max" value="hbo max">
     <label for="hbo max">hbo max</label>
 
-    <input type="radio" name="stream_service" id="hulu" value="hulu">
+    <input type="checkbox" name="stream_service" id="hulu" value="hulu">
     <label for="hulu">hulu</label>
 
-    <input type="radio" name="stream_service" id="disney+" value="disney+">
+    <input type="checkbox" name="stream_service" id="disney+" value="disney+">
     <label for="disney+">disney+</label>
 
-    <input type="radio" name="stream_service" id="peacock" value="peacock">
+    <input type="checkbox" name="stream_service" id="peacock" value="peacock">
     <label for="peacock">peacock</label>
+  </div>
+
+
+  <div id="genre_selection">
+    <legend>which movie genres are you interested in?</legend>
+
+    <input type="checkbox" name="genre" id="action" value="action">
+    <label for="action">action</label>
+    
+    <input type="checkbox" name="genre" id="drama" value="drama">
+    <label for="drama">drama</label>
+    
+    <input type="checkbox" name="genre" id="comedy" value="comedy">
+    <label for="comedy">comedy</label>
+    
+    <input type="checkbox" name="genre" id="horror" value="horror">
+    <label for="horror">horror</label>
+    
+    <input type="checkbox" name="genre" id="adventure" value="adventure">
+    <label for="adventure">adventure</label>
+    
+    <input type="checkbox" name="genre" id="thriller" value="thriller">
+    <label for="thriller">thriller</label>
+  </div>
+
+  <div id="generate_button">
+    <button type="button">generate</button>
+  </div>
+
+  <div id="movie_display">
+    <p id="movie_title">14 Peaks: Nothing Is Impossible</p>
+    <img id="movie_picture" src="https://image.tmdb.org/t/p/original/saGMNCD6ayFqmOb9mX2MkkMmW7w.jpg" alt="movie picture" width="270" height="400">
+    <p id="movie_description">In 2019, Nepalese mountain climber Nirmal “Nims” Purja set out to do the
+    unthinkable by climbing the world’s fourteen highest summits in less than seven
+    months. (The previous record was eight years). He called the effort “Project
+    Possible 14/7” and saw it as a way to inspire others to strive for greater
+    heights in any pursuit. The film follows his team as they seek to defy naysayers
+    and push the limits of human endurance.</p>
+  </div>
+
+  <div id="footer">
+    <ul>
+      <li><a href="#">github</a></li>
+      <li><a href="#">portfolio</a></li>
+      <li><a href="#">email</a></li>
+    </ul>
   </div>
 
 </body>
