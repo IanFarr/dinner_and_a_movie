@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  let button = document.querySelector("button")
+  // let button = document.querySelector("button")
 
-  button.addEventListener('click', () => {
-    console.log('clack');
-  });
+  // button.addEventListener('click', () => {
+  //   console.log('clack');
+  // });
 });
