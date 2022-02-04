@@ -35,3 +35,6 @@ function printInfo(result) {
   console.log(info);
 
 }
+
+
+https://maps.googleapis.com/maps/api/place/nearbysearch/json?/key=AIzaSyARiWNzgztoJchJxyq_EuAgyX3UEQ14k_I
