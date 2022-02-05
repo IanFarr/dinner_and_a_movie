@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   let button = document.querySelector("#generate_button button");
+  let movieTitleText = document.querySelector('#movie_title');
+  let movieDescriptionText = document.querySelector('#movie_description');
+  let moviePictureBox = document.querySelector('#movie_picture');
 
   button.addEventListener('click', () => {
     const streamSelections = document.querySelectorAll("#stream_service_selection input:checked");
@@ -19,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return randomSelection;
   }
 
-  function generateRandomMovie(stream, genre) {
+  async function generateRandomMovie(stream, genre) {
     var options = {
       method: 'GET',
       url: 'https://streaming-availability.p.rapidapi.com/search/basic',
@@ -28,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         service: stream,
         type: 'movie',
         genre: genre,
-        page: '1',
+        page: `1`,
         output_language: 'en',
         language: 'en'
       },
@@ -38,10 +41,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
 
-    axios.request(options).then(function (response) {
-      console.log(response.data)
+    await axios.request(options).then(function (response) {
+      const result = response.data.results[0];
+      const title = result.title;
+      const description = result.overview;
+      const picture = result.posterURLs.original;
+
+      postInfo(title, description, picture);
     }).catch(function (error) {
       console.error(error);
     });
+  }
+
+  function postInfo(title, description, picture) {
+    
+    movieTitleText.innerHTML = title;
+    movieDescriptionText.innerHTML = description;
+    moviePictureBox.src = picture;
   }
 });
