@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  let button = document.querySelector("#generate_button button");
+  let button = document.querySelector("#generate_button");
   let movieTitleText = document.querySelector('#movie_title');
   let movieDescriptionText = document.querySelector('#movie_description');
   let moviePictureBox = document.querySelector('#movie_picture');
@@ -22,27 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return randomSelection;
   }
 
-  async function generateRandomMovie(stream, genre) {
-    var options = {
-      method: 'GET',
-      url: 'https://streaming-availability.p.rapidapi.com/search/basic',
-      params: {
-        country: 'us',
-        service: stream,
-        type: 'movie',
-        genre: genre,
-        page: `1`,
-        output_language: 'en',
-        language: 'en'
-      },
-      headers: {
-        'x-rapidapi-host': 'streaming-availability.p.rapidapi.com',
-        'x-rapidapi-key': STREAMING_AVAILABILITY_API_KEY
-      }
-    };
+  async function generateRandomMovie(service, genre) {
+    console.log(service)
+    console.log(genre)
 
-    await axios.request(options).then(function (response) {
-      const result = response.data.results[0];
+    await axios.post('/api/movies', { service, genre }).then(function (response) {
+      console.log(response)
+      const result = response.data[0];
       const title = result.title;
       const description = result.overview;
       const picture = result.posterURLs.original;

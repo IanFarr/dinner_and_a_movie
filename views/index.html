@@ -8,7 +8,7 @@
   <title>Document</title>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <!-- <script type="text/javascript" src="/javascripts/test.js"></script> -->
-  <!-- <script type="text/javascript" src="/javascripts/movie_generator.js"></script> -->
+  <script type="text/javascript" src="/javascripts/movie_generator.js"></script>
 </head>
 
 <body>
@@ -17,8 +17,6 @@
     <h1>Dinner and a Movie</h1>
     <h2>because decisions are hard</h2>
   </div>
-
-  <form id="movie_form" action="" method="post">
 
     <div id="stream_service_selection">
       <legend>which streaming servicise are you subscribed to:</legend>
@@ -65,8 +63,7 @@
       <label for="thriller">thriller</label>
     </div>
 
-    <button name="generate" value="generate">generate</button>
-  </form>
+    <button id="generate_button" name="generate" value="generate">generate</button>
 
   <div id="movie_display">
     <p id="movie_title">14 Peaks: Nothing Is Impossible</p>
