@@ -9,8 +9,9 @@ function get() {
       longitude: '-122.5082',
       limit: '30',
       currency: 'USD',
+      restaurant_dining_options: 'delivery',
+      prices_restaurants: '$$$',
       distance: '2',
-      restaurant_tagcategory: 'delivery',
       open_now: 'true',
       lunit: 'km',
       lang: 'en_US'
