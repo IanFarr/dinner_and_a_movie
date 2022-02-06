@@ -1,57 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
+function generateRandomMovie(streamSelections, genreSelections, postMovieInfo) {
+  const selections = getRandomSelection(streamSelections, genreSelections);
+  callMovieApi(selections, postMovieInfo);
+}
 
-  const button = document.querySelector("#generate_button");
-  const movieTitleText = document.querySelector('#movie_title');
-  const movieDescriptionText = document.querySelector('#movie_description');
-  const moviePictureBox = document.querySelector('#movie_picture');
+function getRandomSelection(streamSelections, genreSelections) {
+  const streamListLength = streamSelections.length;
+  service = streamSelections[Math.floor(Math.random() * streamListLength)].value;
+  const genreListLength = genreSelections.length;
+  genre = genreSelections[Math.floor(Math.random() * genreListLength)].value;
+  return { service, genre };
+}
 
-  button.addEventListener('click', () => {
-    const streamSelections = document.querySelectorAll("#stream_service_selection input:checked");
-    const genreSelections = document.querySelectorAll("#genre_selection input:checked");
-
-    const stream = getRandomSelection(streamSelections);
-    const genre = getRandomSelection(genreSelections);
-    
-    generateRandomMovie(stream, genre);
-    generateRestaurants();
+async function callMovieApi(selections, postMovieInfo) {
+  console.log(selections)
+  await axios.post('/api/movies', { "service": selections.service, "genre": selections.genre }).then(function (response) {
+    const result = response.data[Math.floor(Math.random() * response.data.length)];
+    const title = result.title;
+    const description = result.overview;
+    const picture = result.posterURLs.original;
+    const service = selections.service;
+    postMovieInfo({ title, description, picture, service })
+  }).catch(function (error) {
+    console.error(error);
   });
-
-  function getRandomSelection(selections) {
-    const listLength = selections.length;
-    const randomValue = Math.floor(Math.random() * listLength);
-    randomSelection = selections[randomValue].value;
-    return randomSelection;
-  }
-
-  async function generateRandomMovie(service, genre) {
-    await axios.post('/api/movies', { service, genre }).then(function (response) {
-      const result = response.data[0];
-      const title = result.title;
-      const description = result.overview;
-      const picture = result.posterURLs.original;
-
-      postInfo(title, description, picture);
-    }).catch(function (error) {
-      console.error(error);
-    });
-  }
-
-
-
-  async function generateRestaurants() {
-    console.log('clicked');
-    await axios.post('/api/restaurants', {}).then(function (response) {
-      console.log(response)
-    }).catch(function (error) {
-      console.error(error);
-    });
-  }
-
-
-
-  function postInfo(title, description, picture) {
-    movieTitleText.innerHTML = title;
-    movieDescriptionText.innerHTML = description;
-    moviePictureBox.src = picture;
-  }
-});
+}

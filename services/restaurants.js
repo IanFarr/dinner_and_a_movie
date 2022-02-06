@@ -1,6 +1,6 @@
-function get() {
-  var axios = require("axios").default;
+var axios = require("axios").default;
 
+function get() {
   var options = {
     method: 'GET',
     url: 'https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng',
@@ -10,7 +10,8 @@ function get() {
       limit: '30',
       currency: 'USD',
       distance: '2',
-      open_now: 'false',
+      restaurant_tagcategory: 'delivery',
+      open_now: 'true',
       lunit: 'km',
       lang: 'en_US'
     },
