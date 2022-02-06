@@ -51,12 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function postRestaurantInfo(restaurant) {
     // // update restaurant info
     restaurantNameText.innerHTML = restaurant.name;
-    restaurantCuisineText.innerHTML = "test";
+    restaurantCuisineText.innerHTML = `Cuisine Style: ${restaurant.cuisine}`;
     restaurantaddressText.innerHTML = restaurant.address;
     restaurantPhoneText.innerHTML = restaurant.phoneNumber;
     restaurantWebsiteText.innerHTML = restaurant.website;
-    restaurantPriceText.innerHTML = restaurant.price;
-    // restaurantPictureBox.src = restaurant.picture;
 
     revealDisplay();
   }

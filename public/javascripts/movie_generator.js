@@ -12,7 +12,6 @@ function getRandomSelection(streamSelections, genreSelections) {
 }
 
 async function callMovieApi(selections, postMovieInfo) {
-  console.log(selections)
   await axios.post('/api/movies', { "service": selections.service, "genre": selections.genre }).then(function (response) {
     const result = response.data[Math.floor(Math.random() * response.data.length)];
     const title = result.title;
