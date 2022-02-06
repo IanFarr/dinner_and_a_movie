@@ -23,4 +23,4 @@ function get(service, genre) {
 }
 
 // sugar: can also be {get: get}
-module.exports = {get};
+module.exports = { get };
