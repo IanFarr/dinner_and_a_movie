@@ -7,7 +7,7 @@ html {
 
 #header {
   margin-top: 60px;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +15,7 @@ html {
 }
 
 #header img {
-  width: 350px;
+  width: 400px;
 }
 
 #header h2 {
@@ -48,8 +48,8 @@ legend {
 }
 
 #stream_service_selection label {
-	width: 400px;
-	height: 146px;
+	width: 350px;
+	height: 88px;
 	cursor: pointer;
   margin: 8px;
 }
@@ -60,4 +60,16 @@ legend {
 
 #stream_service_selection #prime + label {
 	background-image: url(../images/mobile/prime_button_mobile.png);
+}
+
+#stream_service_selection #hbo + label {
+	background-image: url(../images/mobile/hbo_button_mobile.png);
+}
+
+#stream_service_selection #hulu + label {
+	background-image: url(../images/mobile/hulu_button_mobile.png);
+}
+
+#stream_service_selection #disney + label {
+	background-image: url(../images/mobile/disney_button_mobile.png);
 }
