@@ -18,9 +18,11 @@ html {
 }
 
 #header h2 {
+  margin-top: -35px;
   font-family: Helvetica;
-  font-weight: 300;
-  font-size: 80;
+  font-weight: 600;
+  font-size: 18px;
+  text-shadow: 1px .5px #000;
 }
 
 #input_display {
