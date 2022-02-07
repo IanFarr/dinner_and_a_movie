@@ -7,7 +7,7 @@ html {
 
 #header {
   margin-top: 60px;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,11 +31,15 @@ legend {
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 15px;
+  margin-top: 40px;
 }
 
 #input_display {
   color: white;
 }
+
+
+/* service selection */
 
 #stream_service_selection {
   display: flex;
@@ -72,4 +76,56 @@ legend {
 
 #stream_service_selection #disney + label {
 	background-image: url(../images/mobile/disney_button_mobile.png);
+}
+
+
+/* genre selection */
+
+#genre_selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#genre_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#genre_buttons input[type="checkbox"] {
+	display:none;
+}
+
+#genre_buttons label {
+	width: 172px;
+	height: 40px;
+	cursor: pointer;
+  margin: 8px;
+}
+
+#genre_buttons #action + label {
+	background-image: url(../images/mobile/action_genre_button_mobile.png);
+}
+
+#genre_buttons #drama + label {
+	background-image: url(../images/mobile/drama_genre_button_mobile.png);
+}
+
+#genre_buttons #comedy + label {
+	background-image: url(../images/mobile/comedy_genre_button_mobile.png);
+}
+
+#genre_buttons #horror + label {
+	background-image: url(../images/mobile/horror_genre_button_mobile.png);
+}
+
+#genre_buttons #adventure + label {
+	background-image: url(../images/mobile/adventure_genre_button_mobile.png);
+}
+
+#genre_buttons #thriller + label {
+	background-image: url(../images/mobile/thriller_genre_button_mobile.png);
 }
