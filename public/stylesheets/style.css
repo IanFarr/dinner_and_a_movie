@@ -129,3 +129,43 @@ legend {
 #genre_buttons #thriller + label {
 	background-image: url(../images/mobile/thriller_genre_button_mobile.png);
 }
+
+
+/* price selection */
+
+#price_selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#price_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#price_buttons input[type="checkbox"] {
+	display:none;
+}
+
+#price_buttons label {
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+  margin: 8px;
+}
+
+#price_buttons #one + label {
+	background-image: url(../images/mobile/one_price_button_mobile.png);
+}
+
+#price_buttons #two + label {
+	background-image: url(../images/mobile/two_price_button_mobile.png);
+}
+
+#price_buttons #three + label {
+	background-image: url(../images/mobile/three_price_button_mobile.png);
+}
