@@ -24,8 +24,7 @@ router.post('/api/movies', function (req, res, next) {
 const newLocal = '/api/restaurants';
 // POST restaurant criteria selections
 router.post(newLocal, function (req, res) {
-  console.log('in router')
-  restaurant.get()
+  restaurant.get(req.body.price, req.body.lat, req.body.long)
     .then(restaurants => {
       res.send(restaurants);
     })

@@ -1,6 +1,6 @@
 function generateRandomRestaurant(priceSelections, location, postRestaurantInfo) {
   const priceSelection = getRandomPriceSelection(priceSelections);
-  callRestaurantApi(priceSelection, postRestaurantInfo);
+  callRestaurantApi(priceSelection, location, postRestaurantInfo);
 }
 
 function getRandomPriceSelection(priceSelections) {
@@ -9,11 +9,11 @@ function getRandomPriceSelection(priceSelections) {
   return { price };
 }
 
-async function callRestaurantApi(priceSelection, postRestaurantInfo) {
-  await axios.post('/api/restaurants', { "price": priceSelection.id }).then(function (response) {
+async function callRestaurantApi(priceSelection, location, postRestaurantInfo) {
+  await axios.post('/api/restaurants', { "price": priceSelection.price, "lat": location.coords.latitude, "long": location.coords.longitude }).then(function (response) {
     const result = response.data.data[Math.floor(Math.random() * 30)];
     const name = result.name;
-    const cuisine = result.cuisine[0].name;
+    const cuisine = result.cuisine[0].name || "mystery";
     const address = result.address;
     const phoneNumber = result.phone;
     const website = result.web_url;

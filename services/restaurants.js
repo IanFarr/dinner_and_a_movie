@@ -1,12 +1,13 @@
 var axios = require("axios").default;
 
-function get(price) {
+function get(price, lat, long) {
+  console.log("in api caller")
   var options = {
     method: 'GET',
     url: 'https://travel-advisor.p.rapidapi.com/restaurants/list-by-latlng',
     params: {
-      latitude: '37.7573',
-      longitude: '-122.5082',
+      latitude: `${lat}`,
+      longitude: `${long}`,
       limit: '30',
       currency: 'USD',
       restaurant_dining_options: 'delivery',
