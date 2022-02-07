@@ -21,20 +21,39 @@ document.addEventListener("DOMContentLoaded", () => {
   const restaurantaddressText = document.querySelector('#restaurant_address');
   const restaurantPhoneText = document.querySelector('#restaurant_phone_number');
   const restaurantWebsiteText = document.querySelector('#restaurant_website');
-  const restaurantPriceText = document.querySelector('#restaurant_price_level');
-  const restaurantPictureBox = document.querySelector('#restaurant_picture');
 
 
-
-  generateButton.addEventListener('click', () => {
+  generateButton.addEventListener('click', async () => {
     const streamSelections = document.querySelectorAll("#stream_service_selection input:checked");
     const genreSelections = document.querySelectorAll("#genre_selection input:checked");
 
     const priceSelections = document.querySelectorAll("#price_selection input:checked");
 
-    generateRandomMovie(streamSelections, genreSelections, postMovieInfo);
-    generateRandomRestaurant(priceSelections, postRestaurantInfo);
+    var locationPromise = getLocation();
+    locationPromise
+      .then(function (location) {
+        generateRandomMovie(streamSelections, genreSelections, location, postMovieInfo);
+        generateRandomRestaurant(priceSelections, location, postRestaurantInfo);
+      })
+      .catch(function (err) { console.log("No location"); });
   });
+
+
+  function getLocation(callback) {
+    var promise = new Promise(function (resolve, reject) {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          function (position) {
+            resolve(position)
+          }
+        );
+      } else {
+        reject("Unknown");
+      }
+    });
+
+    return promise;
+  }
 
   againButton.addEventListener('click', () => {
     hideDisplay();

@@ -1,4 +1,4 @@
-function generateRandomMovie(streamSelections, genreSelections, postMovieInfo) {
+function generateRandomMovie(streamSelections, genreSelections, location, postMovieInfo) {
   const selections = getRandomSelection(streamSelections, genreSelections);
   callMovieApi(selections, postMovieInfo);
 }

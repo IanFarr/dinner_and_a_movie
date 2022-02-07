@@ -1,4 +1,4 @@
-function generateRandomRestaurant(priceSelections, postRestaurantInfo) {
+function generateRandomRestaurant(priceSelections, location, postRestaurantInfo) {
   const priceSelection = getRandomPriceSelection(priceSelections);
   callRestaurantApi(priceSelection, postRestaurantInfo);
 }
