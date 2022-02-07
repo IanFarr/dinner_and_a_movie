@@ -15,7 +15,7 @@ html {
 }
 
 #header img {
-  width: 400px;
+  width: 475px;
 }
 
 #header h2 {
@@ -79,6 +79,29 @@ legend {
 }
 
 
+
+
+#stream_service_selection #netflix[type="checkbox"]:checked + label {
+	background-image: url(../images/mobile/netflix_button_mobile_checked.png);
+}
+
+#stream_service_selection #prime[type="checkbox"]:checked + label {
+	background-image: url(../images/mobile/prime_button_mobile_checked.png);
+}
+
+#stream_service_selection #hbo[type="checkbox"]:checked + label {
+	background-image: url(../images/mobile/hbo_button_mobile_checked.png);
+}
+
+#stream_service_selection #hulu[type="checkbox"]:checked + label {
+	background-image: url(../images/mobile/hulu_button_mobile_checked.png);
+}
+
+#stream_service_selection #disney[type="checkbox"]:checked + label {
+	background-image: url(../images/mobile/disney_button_mobile_checked.png);
+}
+
+
 /* genre selection */
 
 #genre_selection {
@@ -106,28 +129,54 @@ legend {
   margin: 8px;
 }
 
-#genre_buttons #action + label {
+#genre_buttons #action[type="checkbox"]:checked + label {
 	background-image: url(../images/mobile/action_genre_button_mobile.png);
 }
 
-#genre_buttons #drama + label {
+#genre_buttons #drama[type="checkbox"]:checked + label {
 	background-image: url(../images/mobile/drama_genre_button_mobile.png);
 }
 
-#genre_buttons #comedy + label {
+#genre_buttons #comedy[type="checkbox"]:checked + label {
 	background-image: url(../images/mobile/comedy_genre_button_mobile.png);
 }
 
-#genre_buttons #horror + label {
+#genre_buttons #horror[type="checkbox"]:checked + label {
 	background-image: url(../images/mobile/horror_genre_button_mobile.png);
 }
 
-#genre_buttons #adventure + label {
+#genre_buttons #adventure[type="checkbox"]:checked + label {
 	background-image: url(../images/mobile/adventure_genre_button_mobile.png);
 }
 
-#genre_buttons #thriller + label {
+#genre_buttons #thriller[type="checkbox"]:checked + label {
 	background-image: url(../images/mobile/thriller_genre_button_mobile.png);
+}
+
+
+
+#genre_buttons #action + label {
+	background-image: url(../images/mobile/action_genre_button_mobile_checked.png);
+}
+
+#genre_buttons #drama + label {
+	background-image: url(../images/mobile/drama_genre_button_mobile_checked.png);
+}
+
+#genre_buttons #comedy + label {
+	background-image: url(../images/mobile/comedy_genre_button_mobile_checked.png);
+}
+
+#genre_buttons #horror + label {
+	background-image: url(../images/mobile/horror_genre_button_mobile_checked.png);
+}
+
+#genre_buttons #adventure + label {
+	background-image: url(../images/mobile/adventure_genre_button_mobile_checked.png);
+}
+
+#genre_buttons #thriller + label {
+	background-image: url(../images/mobile/thriller_genre_button_mobile_checked.png);
 }
 
 
