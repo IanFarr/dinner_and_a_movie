@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var locationPromise = getLocation();
     locationPromise
       .then(function (location) {
-        // generateRandomMovie(streamSelections, genreSelections, location, postMovieInfo);
+        generateRandomMovie(streamSelections, genreSelections, location, postMovieInfo);
         generateRandomRestaurant(priceSelections, location, postRestaurantInfo);
       })
       .catch(function (err) { console.log("No location"); });
