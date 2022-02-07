@@ -6,7 +6,8 @@ html {
 }
 
 #header {
-  margin: 40px;
+  margin-top: 60px;
+  margin-bottom: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,9 +23,41 @@ html {
   font-family: Helvetica;
   font-weight: 600;
   font-size: 18px;
-  text-shadow: 1px .5px #000;
+  text-shadow: 1px 1px #000;
+}
+
+legend {
+  font-family: Helvetica;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 15px;
 }
 
 #input_display {
   color: white;
+}
+
+#stream_service_selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#stream_service_selection input[type="checkbox"] {
+	display:none;
+}
+
+#stream_service_selection label {
+	width: 400px;
+	height: 146px;
+	cursor: pointer;
+  margin: 8px;
+}
+
+#stream_service_selection #netflix + label {
+	background-image: url(../images/mobile/netflix_button_mobile.png);
+}
+
+#stream_service_selection #prime + label {
+	background-image: url(../images/mobile/prime_button_mobile.png);
 }
