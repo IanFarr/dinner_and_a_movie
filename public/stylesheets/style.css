@@ -1,0 +1,28 @@
+html {
+
+  background: rgb(255,17,252);
+  background: linear-gradient(126deg, rgba(255,17,252,1) 0%, rgba(210,17,255,1) 24%, rgba(142,17,255,1) 100%);
+
+}
+
+#header {
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#header img {
+  width: 350px;
+}
+
+#header h2 {
+  font-family: Helvetica;
+  font-weight: 300;
+  font-size: 80;
+}
+
+#input_display {
+  color: white;
+}
