@@ -324,6 +324,87 @@ legend {
 }
 
 
+/* ------------------------------------- */
+/* results display */
+/* ------------------------------------- */
+
+/* movie display */
+
+#movie_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-right: 20px;
+}
+
+#movie_display {
+  justify-content: center;
+  width: 400px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background:linear-gradient(135deg, #CE9FFC 0%,#7367F0 100%);
+  font-family: helvetica;
+  color: white;
+  border-radius: 15px;
+}
+
+#movie_title {
+  margin: 20px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+#movie_picture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  border-radius: 15px;
+}
+
+#movie_description {
+  margin: 18px;
+  line-height: 1.2;
+}
+
+#movie_stream {
+  margin: 15px;
+  text-align: center;
+  font-size: 24px;
+}
+
+
+/* restaurant display */
+
+
+#restaurant_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+#restaurant_display {
+  justify-content: center;
+  width: 400px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background:linear-gradient(135deg, #CE9FFC 0%,#7367F0 100%);
+  font-family: helvetica;
+  color: white;
+  border-radius: 15px;
+}
+
+#restaurant_name {
+  margin: 20px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+
+
 
 /* tablet version */
 
