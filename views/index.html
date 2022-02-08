@@ -25,19 +25,19 @@
       <div id="stream_service_selection">
         <legend>which streaming servicise are you subscribed to:</legend>
 
-        <input type="checkbox" name="stream_service" id="netflix" value="netflix" checked="true">
+        <input type="checkbox" name="stream_service" id="netflix" value="netflix">
         <label for="netflix"></label>
 
-        <input type="checkbox" name="stream_service" id="prime" value="prime" checked="true">
+        <input type="checkbox" name="stream_service" id="prime" value="prime">
         <label for="prime"></label>
 
-        <input type="checkbox" name="stream_service" id="hbo" value="hbo" checked="true">
+        <input type="checkbox" name="stream_service" id="hbo" value="hbo">
         <label for="hbo"></label>
 
-        <input type="checkbox" name="stream_service" id="hulu" value="hulu" checked="true">
+        <input type="checkbox" name="stream_service" id="hulu" value="hulu">
         <label for="hulu"></label>
 
-        <input type="checkbox" name="stream_service" id="disney" value="disney" checked="true">
+        <input type="checkbox" name="stream_service" id="disney" value="disney">
         <label for="disney"></label>
 
       </div>
@@ -48,22 +48,22 @@
 
         <div id="genre_buttons">
 
-          <input type="checkbox" name="genre" id="action" value="28" checked="true">
+          <input type="checkbox" name="genre" id="action" value="28">
           <label for="action"></label>
 
-          <input type="checkbox" name="genre" id="drama" value="18" checked="true">
+          <input type="checkbox" name="genre" id="drama" value="18">
           <label for="drama"></label>
 
-          <input type="checkbox" name="genre" id="comedy" value="35" checked="true">
+          <input type="checkbox" name="genre" id="comedy" value="35">
           <label for="comedy"></label>
 
-          <input type="checkbox" name="genre" id="horror" value="27" checked="true">
+          <input type="checkbox" name="genre" id="horror" value="27">
           <label for="horror"></label>
 
-          <input type="checkbox" name="genre" id="adventure" value="12" checked="true">
+          <input type="checkbox" name="genre" id="adventure" value="12">
           <label for="adventure"></label>
 
-          <input type="checkbox" name="genre" id="thriller" value="53" checked="true">
+          <input type="checkbox" name="genre" id="thriller" value="53">
           <label for="thriller"></label>
 
         </div>
@@ -74,18 +74,20 @@
 
         <div id="price_buttons">
       
-          <input type="checkbox" name="price" id="one" value="$" checked="true">
-          <label for="$"></label>
+          <input type="checkbox" name="price" id="one" value="$">
+          <label for="one"></label>
       
-          <input type="checkbox" name="price" id="two" value="$$" checked="true">
-          <label for="$$"></label>
+          <input type="checkbox" name="price" id="two" value="$$">
+          <label for="two"></label>
       
-          <input type="checkbox" name="price" id="three" value="$$$" checked="true">
-          <label for="$$$"></label>
+          <input type="checkbox" name="price" id="three" value="$$$">
+          <label for="three"></label>
         </div>
       </div>
 
-      <button id="generate_button" name="generate" value="generate">generate</button>
+      <div id="generate_button_div">
+        <button id="generate_button" name="generate" value="generate">decide for me!</button>
+      </div>
     </div>
 
   <div id="movie_display" hidden="true">
@@ -109,7 +111,9 @@
     <p id="restaurant_website">http://www.houseofan.com</p>
   </div>
 
-  <button id="again_button" name="again" value="again" hidden="true">again</button>
+  <div id="again_button_div">
+    <button id="again_button" name="again" value="again" hidden="true">again</button>
+  </div>
 
   <div id="footer">
     <ul>

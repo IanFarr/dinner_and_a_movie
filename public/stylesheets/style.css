@@ -22,7 +22,7 @@ html {
   margin-top: -35px;
   font-family: Helvetica;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 22px;
   text-shadow: 1px 1px #000;
 }
 
@@ -129,53 +129,53 @@ legend {
   margin: 8px;
 }
 
-#genre_buttons #action[type="checkbox"]:checked + label {
+#genre_buttons #action + label {
 	background-image: url(../images/mobile/action_genre_button_mobile.png);
 }
 
-#genre_buttons #drama[type="checkbox"]:checked + label {
+#genre_buttons #drama + label {
 	background-image: url(../images/mobile/drama_genre_button_mobile.png);
 }
 
-#genre_buttons #comedy[type="checkbox"]:checked + label {
+#genre_buttons #comedy + label {
 	background-image: url(../images/mobile/comedy_genre_button_mobile.png);
 }
 
-#genre_buttons #horror[type="checkbox"]:checked + label {
+#genre_buttons #horror + label {
 	background-image: url(../images/mobile/horror_genre_button_mobile.png);
 }
 
-#genre_buttons #adventure[type="checkbox"]:checked + label {
+#genre_buttons #adventure + label {
 	background-image: url(../images/mobile/adventure_genre_button_mobile.png);
 }
 
-#genre_buttons #thriller[type="checkbox"]:checked + label {
+#genre_buttons #thriller + label {
 	background-image: url(../images/mobile/thriller_genre_button_mobile.png);
 }
 
 
 
-#genre_buttons #action + label {
+#genre_buttons #action[type="checkbox"]:checked + label {
 	background-image: url(../images/mobile/action_genre_button_mobile_checked.png);
 }
 
-#genre_buttons #drama + label {
+#genre_buttons #drama[type="checkbox"]:checked + label {
 	background-image: url(../images/mobile/drama_genre_button_mobile_checked.png);
 }
 
-#genre_buttons #comedy + label {
+#genre_buttons #comedy[type="checkbox"]:checked + label {
 	background-image: url(../images/mobile/comedy_genre_button_mobile_checked.png);
 }
 
-#genre_buttons #horror + label {
+#genre_buttons #horror[type="checkbox"]:checked + label {
 	background-image: url(../images/mobile/horror_genre_button_mobile_checked.png);
 }
 
-#genre_buttons #adventure + label {
+#genre_buttons #adventure[type="checkbox"]:checked + label {
 	background-image: url(../images/mobile/adventure_genre_button_mobile_checked.png);
 }
 
-#genre_buttons #thriller + label {
+#genre_buttons #thriller[type="checkbox"]:checked + label {
 	background-image: url(../images/mobile/thriller_genre_button_mobile_checked.png);
 }
 
@@ -217,4 +217,58 @@ legend {
 
 #price_buttons #three + label {
 	background-image: url(../images/mobile/three_price_button_mobile.png);
+}
+
+
+
+#price_buttons #one[type="checkbox"]:checked + label {
+	background-image: url(../images/mobile/one_price_button_mobile_checked.png);
+}
+
+#price_buttons #two[type="checkbox"]:checked + label {
+	background-image: url(../images/mobile/two_price_button_mobile_checked.png);
+}
+
+#price_buttons #three[type="checkbox"]:checked + label {
+	background-image: url(../images/mobile/three_price_button_mobile_checked.png);
+}
+
+
+/* generate button */
+
+#generate_button_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+}
+
+#generate_button_div button {
+  font-family: Helvetice;
+  font-size: 20px;
+  font-weight: 100;
+  color: #fff;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  box-shadow: 0;
+  background-color: #6A3C7F;
+  padding: 10px 50px 10px 50px;
+
+  transition-duration: 0.4s;
+}
+
+#generate_button_div button:hover {
+  background: transparent;
+  background-color: #8D00CC;
+  cursor: pointer;
+}
+
+
+/* footer */
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid #fff;
 }
