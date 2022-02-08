@@ -29,31 +29,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const priceSelections = document.querySelectorAll("#price_selection input:checked");
 
+    if (!streamSelections.length || !genreSelections.length || !priceSelections.length) {
+      alert('Please select at least one of each criteria');
+      return;
+    }
+
     var locationPromise = getLocation();
     locationPromise
       .then(function (location) {
         generateRandomMovie(streamSelections, genreSelections, location, postMovieInfo);
         generateRandomRestaurant(priceSelections, location, postRestaurantInfo);
       })
-      .catch(function (err) { console.log("No location"); });
-  });
+      .catch(function (err) {
+        generateRandomMovie(streamSelections, genreSelections, null, postMovieInfo);
+        generateRandomRestaurant(priceSelections, null, noLocation);
+      });
 
 
-  function getLocation(callback) {
-    var promise = new Promise(function (resolve, reject) {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          function (position) {
-            resolve(position)
+    function getLocation(callback) {
+      var promise = new Promise(function (resolve, reject) {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition((location) => {
+            resolve(location);
           }
-        );
-      } else {
-        reject("Unknown");
-      }
-    });
+          );
+        } else {
+          reject(err)
+        }
+      });
 
-    return promise;
-  }
+      return promise;
+    }
+  });
 
   againButton.addEventListener('click', () => {
     hideDisplay();
@@ -70,10 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function postRestaurantInfo(restaurant) {
     // // update restaurant info
     restaurantNameText.innerHTML = restaurant.name;
-    restaurantCuisineText.innerHTML = `Cuisine Style: ${restaurant.cuisine}`;
-    restaurantaddressText.innerHTML = restaurant.address;
-    restaurantPhoneText.innerHTML = restaurant.phoneNumber;
-    restaurantWebsiteText.innerHTML = restaurant.website;
+    restaurantCuisineText.innerHTML = `Cuisine: ${restaurant.cuisine}`;
+    restaurantaddressText.innerHTML = `Address: ${restaurant.street}, ${restaurant.city}`;
+    restaurantPhoneText.innerHTML = `Phone: ${restaurant.phoneNumber}`;
+    restaurantWebsiteText.href = restaurant.website;
 
     revealDisplay();
   }
@@ -92,6 +99,11 @@ document.addEventListener("DOMContentLoaded", () => {
     againButton.hidden = true
 
     inputDisplay.hidden = false;
+  }
+
+  function noLocation() {
+    revealDisplay();
+    alert('location is required to display a nearby restaurant');
   }
 
 });
