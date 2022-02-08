@@ -1,10 +1,6 @@
-function generateRandomRestaurant(priceSelections, location, postRestaurantInfo) {
-  if (location === null) {
-    postRestaurantInfo();
-  } else {
-    const priceSelection = getRandomPriceSelection(priceSelections);
-    callRestaurantApi(priceSelection, location, postRestaurantInfo);
-  }
+function generateRandomRestaurant(priceSelections, location, postRestaurantInfo, noLocation) {
+  const priceSelection = getRandomPriceSelection(priceSelections);
+  callRestaurantApi(priceSelection, location, postRestaurantInfo);
 }
 
 function getRandomPriceSelection(priceSelections) {
@@ -14,6 +10,9 @@ function getRandomPriceSelection(priceSelections) {
 }
 
 async function callRestaurantApi(priceSelection, location, postRestaurantInfo) {
+
+  console.log(location);
+
   await axios.post('/api/restaurants', { "price": priceSelection.price, "lat": location.coords.latitude, "long": location.coords.longitude }).then(function (response) {
     const result = response.data.data[Math.floor(Math.random() * 30)];
     const name = result.name;

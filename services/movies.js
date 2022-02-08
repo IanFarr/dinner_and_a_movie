@@ -1,6 +1,6 @@
 const axios = require('axios').default;
 
-function get(service, genre) {
+function get(service, genre, page) {
   var options = {
     method: 'GET',
     url: 'https://streaming-availability.p.rapidapi.com/search/basic',
@@ -9,7 +9,7 @@ function get(service, genre) {
       service: service,
       type: 'movie',
       genre: genre,
-      page: '1',
+      page: page,
       output_language: 'en',
       language: 'en'
     },
@@ -19,7 +19,7 @@ function get(service, genre) {
     }
   };
 
-  return axios.request(options).then(res => res.data.results);
+  return axios.request(options).then(res => res.data);
 }
 
 // sugar: can also be {get: get}
