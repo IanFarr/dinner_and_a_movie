@@ -1,12 +1,12 @@
 html {
 
   background: rgb(255,17,252);
-  background: linear-gradient(126deg, rgba(255,17,252,1) 0%, rgba(210,17,255,1) 24%, rgba(142,17,255,1) 100%);
+  background: linear-gradient(126deg, rgba(255,17,252,1) 0%, rgba(210,17,255,1) 40%, rgba(142,17,255,1) 100%);
 
 }
 
 #header {
-  margin-top: 60px;
+  margin-top: 40px;
   margin-bottom: 70px;
   display: flex;
   flex-direction: column;
@@ -16,14 +16,28 @@ html {
 
 #header img {
   width: 475px;
+  margin-top: 40px;
+}
+
+#header #large_logo {
+  display: none;
 }
 
 #header h2 {
-  margin-top: -35px;
+  margin-top: 15px;
   font-family: Helvetica;
   font-weight: 600;
   font-size: 22px;
   text-shadow: 1px 1px #000;
+}
+
+#top_border {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-top: 1.5px solid #fff;;
 }
 
 legend {
@@ -45,6 +59,15 @@ legend {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#service_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 70%;
 }
 
 #stream_service_selection input[type="checkbox"] {
@@ -116,6 +139,7 @@ legend {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  max-width: 90%;
 }
 
 #genre_buttons input[type="checkbox"] {
@@ -244,12 +268,12 @@ legend {
 }
 
 #generate_button_div button {
-  font-family: Helvetice;
+  font-family: Helvetica;
   font-size: 20px;
   font-weight: 100;
   color: #fff;
   border-radius: 8px;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   box-shadow: 0;
   background-color: #6A3C7F;
   padding: 10px 50px 10px 50px;
@@ -266,9 +290,74 @@ legend {
 
 /* footer */
 
-#footer {
+#bottom_border {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
   border-top: 2px solid #fff;
+}
+
+#footer {
+  margin: 30px;
+}
+
+#footer ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#footer ul a {
+  color: #fff;
+  font-family: helvetica;
+  font-size: 14px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+
+
+/* tablet version */
+
+@media only screen and (min-width: 600px) {
+
+  #genre_buttons {
+  max-width: 70%;
+}
+
+}
+
+/* desktop version */
+
+@media only screen and (min-width: 1000px) {
+
+  #genre_buttons {
+  max-width: 50%;
+}
+
+legend {
+  font-size: 28px;
+}
+
+#header #small_logo {
+  display: none;
+}
+
+#header #large_logo {
+  display: block;
+  width: 700px;
+}
+
+#header h2 {
+  font-size: 28px;
+}
+
 }

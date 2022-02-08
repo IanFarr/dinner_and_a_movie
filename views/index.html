@@ -17,28 +17,35 @@
 <body>
 
   <div id="header">
-    <img src="images/mobile/logo_test.png" alt="dinner and a movie">
+    <img id="small_logo" src="images/mobile/logo_mobile.png" alt="dinner and a movie">
+    <img id="large_logo" src="images/desktop/logo_desktop.png" alt="dinner and a movie">
     <h2>because decisions are hard</h2>
   </div>
+
+  <div id="top_border"></div>
 
     <div id="input_display">
       <div id="stream_service_selection">
         <legend>which streaming servicise are you subscribed to:</legend>
 
-        <input type="checkbox" name="stream_service" id="netflix" value="netflix">
-        <label for="netflix"></label>
+        <div id="service_buttons">
 
-        <input type="checkbox" name="stream_service" id="prime" value="prime">
-        <label for="prime"></label>
+          <input type="checkbox" name="stream_service" id="netflix" value="netflix">
+          <label for="netflix"></label>
+          
+          <input type="checkbox" name="stream_service" id="prime" value="prime">
+          <label for="prime"></label>
+          
+          <input type="checkbox" name="stream_service" id="hbo" value="hbo">
+          <label for="hbo"></label>
+          
+          <input type="checkbox" name="stream_service" id="hulu" value="hulu">
+          <label for="hulu"></label>
+          
+          <input type="checkbox" name="stream_service" id="disney" value="disney">
+          <label for="disney"></label>
 
-        <input type="checkbox" name="stream_service" id="hbo" value="hbo">
-        <label for="hbo"></label>
-
-        <input type="checkbox" name="stream_service" id="hulu" value="hulu">
-        <label for="hulu"></label>
-
-        <input type="checkbox" name="stream_service" id="disney" value="disney">
-        <label for="disney"></label>
+        </div>
 
       </div>
 
@@ -114,6 +121,8 @@
   <div id="again_button_div">
     <button id="again_button" name="again" value="again" hidden="true">again</button>
   </div>
+
+  <div id="bottom_border"></div>
 
   <div id="footer">
     <ul>
