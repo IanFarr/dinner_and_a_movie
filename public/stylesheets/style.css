@@ -516,6 +516,8 @@ legend {
   font-size: 28px;
 }
 
+/* movie display */
+
 #movie_div {
   display: flex;
   align-items: center;
@@ -525,6 +527,30 @@ legend {
   margin-left: auto;
 }
 
+#movie_display {
+  justify-content: center;
+  width: 800px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, .95);
+  font-family: helvetica;
+  color: #404040;
+}
+
+#movie_info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+  margin-top: 20px;
+}
+
+#movie_description {
+  border: none;
+  margin-left: 50px;
+}
+
+/* restaurant display */
+
 #restaurant_div {
   display: flex;
   align-items: center;
@@ -532,6 +558,24 @@ legend {
   margin-top: 50px;
   margin-left: 10%;
   margin-right: auto;
+}
+
+#restaurant_display {
+  justify-content: center;
+  width: 800px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, .95);
+  font-family: helvetica;
+  color: #404040;
+}
+
+#restaurant_info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+  margin-top: 20px;
+  margin-left: 50px;
 }
 
 }
