@@ -25,9 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const restaurantWebsiteText = document.querySelector('#restaurant_website');
   const restaurantDiv = document.querySelector('#restaurant_div');
 
-  // var img1= new Image();
-  // img1.src ="images/mobile/netflix_button_mobile_checked.png"
-
+  // load button clicked images in background
   const loadImages = document.querySelector('#load_images');
   loadImages.hidden = true;
 
