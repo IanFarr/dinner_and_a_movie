@@ -1,6 +1,6 @@
-function generateRandomRestaurant(priceSelections, location, postRestaurantInfo) {
+function generateRandomRestaurant(priceSelections, location, postRestaurantInfo, revealLanding, hideLoader) {
   const priceSelection = getRandomPriceSelection(priceSelections);
-  callRestaurantApi(priceSelection, location, postRestaurantInfo);
+  callRestaurantApi(priceSelection, location, postRestaurantInfo, revealLanding, hideLoader);
 }
 
 function getRandomPriceSelection(priceSelections) {
@@ -9,7 +9,7 @@ function getRandomPriceSelection(priceSelections) {
   return { price };
 }
 
-async function callRestaurantApi(priceSelection, location, postRestaurantInfo) {
+async function callRestaurantApi(priceSelection, location, postRestaurantInfo, revealLanding, hideLoader) {
   console.log(location)
 
   await axios.post('/api/restaurants', { "price": priceSelection.price, "lat": location.coords.latitude, "long": location.coords.longitude }).then(function (response) {
@@ -31,6 +31,8 @@ async function callRestaurantApi(priceSelection, location, postRestaurantInfo) {
     postRestaurantInfo({ name, cuisine, address, phoneNumber, website, street, city })
   }).catch(function (error) {
     console.error(error);
+    hideLoader();
+    revealLanding();
     alert('something went wrong');
   });
 }

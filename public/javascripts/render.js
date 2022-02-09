@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(function (location) {
         hideLanding();
         revealLoader();
-        generateRandomMovie(streamSelections, genreSelections, location, postMovieInfo);
-        generateRandomRestaurant(priceSelections, location, postRestaurantInfo);
+        generateRandomMovie(streamSelections, genreSelections, location, postMovieInfo, revealLanding, hideLoader);
+        generateRandomRestaurant(priceSelections, location, postRestaurantInfo, revealLanding, hideLoader);
       })
       .catch(function (err) {
         generateRandomMovie(streamSelections, genreSelections, null, postMovieInfo);

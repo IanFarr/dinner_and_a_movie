@@ -508,6 +508,55 @@ legend {
   cursor: pointer;
 }
 
+/* --------------------------------------- */
+/* loader */
+/* --------------------------------------- */
+
+#loader_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#loader_container {
+  align-items: center;
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	background: linear-gradient(126deg, rgba(255,17,252,1) 0%, rgba(210,17,255,1) 40%, rgba(142,17,255,1) 100%);
+  margin-top: 150px;
+  margin-bottom: 150px;;
+}
+
+#loader_icon:before {
+	position: absolute;
+	content: '';
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	border-bottom: 0 solid #ffffff05;
+  display: inline-flex;
+	
+	box-shadow: 
+		0 -10px 20px 20px #ffffff40 inset,
+		0 -5px 15px 10px #ffffff50 inset,
+		0 -2px 5px #ffffff80 inset,
+		0 -3px 2px #ffffffBB inset,
+		0 2px 0px #ffffff,
+		0 2px 3px #ffffff,
+		0 5px 5px #ffffff90,
+		0 10px 15px #ffffff60,
+		0 10px 20px 20px #ffffff40;
+	filter: blur(3px);
+	animation: 2s rotate linear infinite;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg)
+	}
+}
+
 
 
 
@@ -669,54 +718,18 @@ legend {
   margin-left: 50px;
 }
 
-}
-
-
-/* --------------------------------------- */
 /* loader */
-/* --------------------------------------- */
-
-#loader_div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 #loader_container {
-  align-items: center;
 	width: 250px;
 	height: 250px;
-	border-radius: 100%;
-	background: linear-gradient(126deg, rgba(255,17,252,1) 0%, rgba(210,17,255,1) 40%, rgba(142,17,255,1) 100%);
   margin-top: 300px;
-  margin-bottom: 300px;;
+  margin-bottom: 300px;
 }
 
 #loader_icon:before {
-	position: absolute;
-	content: '';
 	width: 250px;
 	height: 250px;
-	border-radius: 100%;
-	border-bottom: 0 solid #ffffff05;
-  display: inline-flex;
-	
-	box-shadow: 
-		0 -10px 20px 20px #ffffff40 inset,
-		0 -5px 15px 10px #ffffff50 inset,
-		0 -2px 5px #ffffff80 inset,
-		0 -3px 2px #ffffffBB inset,
-		0 2px 0px #ffffff,
-		0 2px 3px #ffffff,
-		0 5px 5px #ffffff90,
-		0 10px 15px #ffffff60,
-		0 10px 20px 20px #ffffff40;
-	filter: blur(3px);
-	animation: 2s rotate linear infinite;
 }
 
-@keyframes rotate {
-	100% {
-		transform: rotate(360deg)
-	}
 }

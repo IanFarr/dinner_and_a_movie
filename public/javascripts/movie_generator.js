@@ -1,6 +1,6 @@
-async function generateRandomMovie(streamSelections, genreSelections, location, postMovieInfo) {
+async function generateRandomMovie(streamSelections, genreSelections, location, postMovieInfo, revealLanding, hideLoader) {
   const selections = getRandomSelection(streamSelections, genreSelections);
-  getNumPages(selections, postMovieInfo);
+  getNumPages(selections, postMovieInfo, revealLanding, hideLoader);
 }
 
 function getRandomSelection(streamSelections, genreSelections) {
@@ -11,18 +11,20 @@ function getRandomSelection(streamSelections, genreSelections) {
   return { service, genre };
 }
 
-async function getNumPages(selections, postMovieInfo) {
+async function getNumPages(selections, postMovieInfo, revealLanding, hideLoader) {
   await axios.post('/api/movies', { "service": selections.service, "genre": selections.genre, "page": '1' }).then(function (response) {
     let numPages = response.data.total_pages;
     let page = Math.floor(Math.random() * numPages)
     selections.page = String(page);
-    callMovieApi(selections, postMovieInfo);
+    callMovieApi(selections, postMovieInfo, revealLanding, hideLoader);
   }).catch(function (error) {
+    hideLoader();
+    revealLanding();
     console.error(error);
   });
 }
 
-async function callMovieApi(selections, postMovieInfo) {
+async function callMovieApi(selections, postMovieInfo, revealLanding, hideLoader) {
   axios.post('/api/movies', { "service": selections.service, "genre": selections.genre, "page": selections.page }).then(function (response) {
     const result = response.data.results[Math.floor(Math.random() * response.data.results.length)];
     const title = result.title;
@@ -31,6 +33,8 @@ async function callMovieApi(selections, postMovieInfo) {
     const service = serviceName(selections.service);
     postMovieInfo({ title, description, picture, service })
   }).catch(function (error) {
+    hideLoader();
+    revealLanding();
     console.error(error);
   });
 }
