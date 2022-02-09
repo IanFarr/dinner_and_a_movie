@@ -79,7 +79,6 @@ legend {
 #stream_service_selection label {
 	width: 250px;
 	height: 62.857px;
-	cursor: pointer;
   margin: 3px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -153,7 +152,6 @@ legend {
 #genre_buttons label {
 	width: 150px;
 	height: 35px;
-	cursor: pointer;
   margin: 3px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -233,7 +231,6 @@ legend {
 #price_buttons label {
 	width: 70px;
 	height: 70px;
-	cursor: pointer;
   margin: 4px;
   border-radius: 50px;
   background-repeat: no-repeat;
@@ -350,43 +347,54 @@ legend {
 
 #movie_display {
   justify-content: center;
-  width: 400px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  background: rgba(255, 255, 255, .95);
+  width: 300px;
   font-family: helvetica;
   color: #404040;
+  margin: 30px;
+  background: rgb(121,189,245);
+  background: linear-gradient(174deg, rgba(121,189,245,1) 0%, rgba(179,201,217,0.654499299719888) 92%);
+  border-radius: 18px;
 }
 
 #movie_title {
-  padding: 15px;
+  padding: 20px;
   text-align: center;
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 800;
-  background-color: #4E4D59;
   color: #fff;
   font-weight: 100;
+  background: #364959;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  border-bottom: 1px solid #fff;
 }
 
 #movie_picture {
-  margin-top: 30px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 300px;
+  margin-top: 20px;
+  width: 60%;
+  height: auto;
+  border-radius: 15px;
+  border: 2px solid #fff;
 }
 
 #movie_description {
-  margin: 30px;
+  margin: 30px 30px 15px 30px;
   line-height: 1.2;
   text-align: justify;
-  border-top: solid 1px #404040;
-  padding-top: 20px;
+  font-size: 12px;
+  border-top: 1px solid #fff;
+  padding-top: 15px;
+  align-items: center;
 }
 
 #movie_stream {
-  margin: 15px;
+  margin-bottom: 15px;
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
+  color: #fff;
 }
 
 
@@ -397,36 +405,44 @@ legend {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
 }
 
 #restaurant_display {
   justify-content: center;
-  width: 400px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  background: rgba(255, 255, 255, .95);
+  width: 300px;
   font-family: helvetica;
   color: #404040;
+  margin: 30px;
+  margin-top: 0;
+  background: rgb(121,189,245);
+  background: linear-gradient(174deg, rgba(121,189,245,1) 0%, rgba(179,201,217,0.654499299719888) 92%);
+  border-radius: 18px;
 }
 
 #restaurant_name {
-  padding: 15px;
+  padding: 20px;
   text-align: center;
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 800;
-  background-color: #4E4D59;
   color: #fff;
   font-weight: 100;
+  background: #364959;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  border-bottom: 1px solid #fff;
 }
 
 #restaurant_picture {
-  margin-top: 30px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 200px;
+  margin-top: 20px;
+  width: 80%;
+  height: auto;
+  border-radius: 15px;
+  border: 2px solid #fff;
 }
 
 #restaurant_cuisine {
@@ -452,9 +468,11 @@ legend {
 }
 
 #restaurant_enjoy {
-  margin: 15px;
+  margin-bottom: 15px;
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
+  color: #fff;
+  margin-top: 15px;
 }
 
 
@@ -522,6 +540,7 @@ legend {
   width: 172px;
 	height: 40px;
   margin: 8px;
+  cursor: pointer;
 }
 
 #genre_buttons label:hover {
@@ -533,6 +552,7 @@ legend {
 	width: 80px;
 	height: 80px;
   margin: 8px;
+  cursor: pointer;
 }
 
 #price_buttons label:hover {
