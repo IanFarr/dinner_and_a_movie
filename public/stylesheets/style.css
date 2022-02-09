@@ -15,7 +15,7 @@ html {
 }
 
 #header img {
-  width: 475px;
+  width: 350px;
   margin-top: 40px;
 }
 
@@ -27,7 +27,7 @@ html {
   margin-top: 15px;
   font-family: Helvetica;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 18px;
   text-shadow: 1px 1px #000;
 }
 
@@ -43,9 +43,11 @@ html {
 legend {
   font-family: Helvetica;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 15px;
   margin-top: 40px;
+  width: 60%;
+  text-align: center;
 }
 
 #input_display {
@@ -70,20 +72,17 @@ legend {
   max-width: 90%;
 }
 
-#service_buttons label:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  border-radius: 20px;
-}
-
 #stream_service_selection input[type="checkbox"] {
 	display:none;
 }
 
 #stream_service_selection label {
-	width: 350px;
-	height: 88px;
+	width: 250px;
+	height: 62.857px;
 	cursor: pointer;
-  margin: 8px;
+  margin: 3px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #stream_service_selection #netflix + label {
@@ -147,20 +146,17 @@ legend {
   max-width: 90%;
 }
 
-#genre_buttons label:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  border-radius: 7px;
-}
-
 #genre_buttons input[type="checkbox"] {
 	display: none;
 }
 
 #genre_buttons label {
-	width: 172px;
-	height: 40px;
+	width: 150px;
+	height: 35px;
 	cursor: pointer;
-  margin: 8px;
+  margin: 3px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 #genre_buttons #action + label {
@@ -230,21 +226,18 @@ legend {
   align-items: center;
 }
 
-#price_buttons label:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  border-radius: 50px;
-}
-
 #price_buttons input[type="checkbox"] {
 	display:none;
 }
 
 #price_buttons label {
-	width: 80px;
-	height: 80px;
+	width: 70px;
+	height: 70px;
 	cursor: pointer;
-  margin: 8px;
-  border-radius: 50px;;
+  margin: 4px;
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 #price_buttons #one + label {
@@ -501,8 +494,50 @@ legend {
 
 @media only screen and (min-width: 600px) {
 
+  #legend {
+    width: 100%;
+  }
+
   #genre_buttons {
   max-width: 70%;
+}
+
+  #header h2 {
+  font-size: 22px;
+}
+
+  #stream_service_selection label {
+	width: 350px;
+	height: 88px;
+	cursor: pointer;
+  margin: 8px;
+}
+
+#service_buttons label:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
+}
+
+#genre_buttons label {
+  width: 172px;
+	height: 40px;
+  margin: 8px;
+}
+
+#genre_buttons label:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 7px;
+}
+
+#price_buttons label {
+	width: 80px;
+	height: 80px;
+  margin: 8px;
+}
+
+#price_buttons label:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 50px;
 }
 
 }
@@ -511,12 +546,12 @@ legend {
 
 @media only screen and (min-width: 1000px) {
 
-  #genre_buttons {
-  max-width: 50%;
-}
-
 legend {
   font-size: 28px;
+}
+
+#genre_buttons {
+  max-width: 50%;
 }
 
 #header #small_logo {

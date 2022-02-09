@@ -28,6 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // load button clicked images in background
   const loadImages = document.querySelector('#load_images');
   loadImages.hidden = true;
+  document.getElementById("load_images").style.margin = "0px";
+  document.getElementById("movie_div").style.margin = "0px";
+  document.getElementById("restaurant_div").style.margin = "0px";
+  document.getElementById("again_button_div").style.margin = "0px";
 
 
   generateButton.addEventListener('click', async () => {
