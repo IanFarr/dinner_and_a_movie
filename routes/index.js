@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
 
 // POST movie criteria selections
 router.post('/api/movies', function (req, res, next) {
-  movie.get(req.body.service, req.body.genre)
+  movie.get(req.body.service, req.body.genre, req.body.page)
     .then(movies => {
       res.send(movies);
     })

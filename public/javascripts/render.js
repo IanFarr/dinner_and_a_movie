@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const movieDescriptionText = document.querySelector('#movie_description');
   const moviePictureBox = document.querySelector('#movie_picture');
   const movieStreamText = document.querySelector('#movie_stream');
+  const movieDiv = document.querySelector('#movie_div');
+  const againButtonDiv = document.querySelector('#again_button_div');
 
 
   // restaurant div queries
@@ -21,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const restaurantaddressText = document.querySelector('#restaurant_address');
   const restaurantPhoneText = document.querySelector('#restaurant_phone_number');
   const restaurantWebsiteText = document.querySelector('#restaurant_website');
+  const restaurantDiv = document.querySelector('#restaurant_div');
 
 
   generateButton.addEventListener('click', async () => {
@@ -90,6 +93,10 @@ document.addEventListener("DOMContentLoaded", () => {
     restaurantDisplay.removeAttribute('hidden')
     againButton.removeAttribute('hidden')
 
+    movieDiv.removeAttribute('hidden')
+    restaurantDiv.removeAttribute('hidden')
+    againButtonDiv.removeAttribute('hidden')
+
     inputDisplay.hidden = true;
   }
 
@@ -97,6 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
     movieDisplay.hidden = true
     restaurantDisplay.hidden = true
     againButton.hidden = true
+
+    movieDiv.hidden = true
+    restaurantDiv.hidden = true
+    againButtonDiv.hidden = true
 
     inputDisplay.hidden = false;
   }

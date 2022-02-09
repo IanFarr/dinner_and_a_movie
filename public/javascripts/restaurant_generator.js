@@ -32,5 +32,6 @@ async function callRestaurantApi(priceSelection, location, postRestaurantInfo) {
     postRestaurantInfo({ name, cuisine, address, phoneNumber, website, street, city })
   }).catch(function (error) {
     console.error(error);
+    alert('something went wrong');
   });
 }
