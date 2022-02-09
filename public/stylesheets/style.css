@@ -70,6 +70,11 @@ legend {
   max-width: 90%;
 }
 
+#service_buttons label:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 20px;
+}
+
 #stream_service_selection input[type="checkbox"] {
 	display:none;
 }
@@ -142,8 +147,13 @@ legend {
   max-width: 90%;
 }
 
+#genre_buttons label:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 7px;
+}
+
 #genre_buttons input[type="checkbox"] {
-	display:none;
+	display: none;
 }
 
 #genre_buttons label {
@@ -220,6 +230,11 @@ legend {
   align-items: center;
 }
 
+#price_buttons label:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 50px;
+}
+
 #price_buttons input[type="checkbox"] {
 	display:none;
 }
@@ -229,6 +244,7 @@ legend {
 	height: 80px;
 	cursor: pointer;
   margin: 8px;
+  border-radius: 50px;;
 }
 
 #price_buttons #one + label {
