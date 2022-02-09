@@ -11,7 +11,7 @@ function get(price, lat, long) {
       currency: 'USD',
       restaurant_dining_options: 'delivery',
       prices_restaurants: price,
-      distance: '2',
+      distance: '4',
       open_now: 'false',
       lunit: 'km',
       lang: 'en_US'
