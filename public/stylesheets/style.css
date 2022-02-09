@@ -67,7 +67,7 @@ legend {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  max-width: 70%;
+  max-width: 90%;
 }
 
 #stream_service_selection input[type="checkbox"] {

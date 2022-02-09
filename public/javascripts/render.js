@@ -25,6 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const restaurantWebsiteText = document.querySelector('#restaurant_website');
   const restaurantDiv = document.querySelector('#restaurant_div');
 
+  // var img1= new Image();
+  // img1.src ="images/mobile/netflix_button_mobile_checked.png"
+
+  const loadImages = document.querySelector('#load_images');
+  loadImages.hidden = true;
+
 
   generateButton.addEventListener('click', async () => {
     const streamSelections = document.querySelectorAll("#stream_service_selection input:checked");
