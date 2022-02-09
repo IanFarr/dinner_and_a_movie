@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // input display query
   const inputDisplay = document.querySelector('#input_display');
 
+  // loader
+  const loaderDiv = document.querySelector('#loader_div');
+  const loaderDisplay = document.querySelector('#loader_container');
+  const loader_icon = document.querySelector('#loader_icon');
+
   // movie div queries
   const movieDisplay = document.querySelector('#movie_display');
   const movieTitleText = document.querySelector('#movie_title');
@@ -48,6 +53,8 @@ document.addEventListener("DOMContentLoaded", () => {
     var locationPromise = getLocation();
     locationPromise
       .then(function (location) {
+        hideLanding();
+        revealLoader();
         generateRandomMovie(streamSelections, genreSelections, location, postMovieInfo);
         generateRandomRestaurant(priceSelections, location, postRestaurantInfo);
       })
@@ -75,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   againButton.addEventListener('click', () => {
     hideDisplay();
+    revealLanding();
   });
 
   function postMovieInfo(movie) {
@@ -93,7 +101,32 @@ document.addEventListener("DOMContentLoaded", () => {
     restaurantPhoneText.innerHTML = `Phone: ${restaurant.phoneNumber}`;
     restaurantWebsiteText.href = restaurant.website;
 
+    hideLoader();
+    hideLanding();
     revealDisplay();
+  }
+
+  function hideLanding() {
+    inputDisplay.hidden = true;
+  }
+
+  function revealLanding() {
+    inputDisplay.hidden = false;
+  }
+
+  function revealLoader() {
+    loaderDiv.removeAttribute('hidden')
+    loaderDisplay.removeAttribute('hidden')
+    loader_icon.removeAttribute('hidden')
+    loaderDiv.hidden = false;
+    loaderDisplay.hidden = false;
+    loader_icon.hidden = false;
+  }
+
+  function hideLoader() {
+    loaderDiv.hidden = true;
+    loaderDisplay.hidden = true;
+    loader_icon.hidden = true;
   }
 
   function revealDisplay() {
@@ -104,8 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
     movieDiv.removeAttribute('hidden')
     restaurantDiv.removeAttribute('hidden')
     againButtonDiv.removeAttribute('hidden')
-
-    inputDisplay.hidden = true;
   }
 
   function hideDisplay() {
@@ -116,13 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
     movieDiv.hidden = true
     restaurantDiv.hidden = true
     againButtonDiv.hidden = true
-
-    inputDisplay.hidden = false;
-  }
-
-  function noLocation() {
-    revealDisplay();
-    alert('location is required to display a nearby restaurant');
   }
 
 });
