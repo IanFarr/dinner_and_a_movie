@@ -28,9 +28,13 @@ async function callMovieApi(selections, postMovieInfo) {
     const title = result.title;
     const description = result.overview;
     const picture = result.posterURLs.original;
-    const service = selections.service;
+    const service = serviceName(selections.service);
     postMovieInfo({ title, description, picture, service })
   }).catch(function (error) {
     console.error(error);
   });
+}
+
+function serviceName(short) {
+  return short === 'netflix' ? 'Netflix' : short === 'prime' ? 'Amazon Prime' : short === 'hbo' ? 'HBO Max' : short === 'hulu' ? 'Hulu' : 'Disney+';
 }

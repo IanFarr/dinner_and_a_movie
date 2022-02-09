@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     movieTitleText.innerHTML = movie.title;
     movieDescriptionText.innerHTML = movie.description;
     moviePictureBox.src = movie.picture;
-    movieStreamText.innerHTML = `watch it on ${movie.service}`;
+    movieStreamText.innerHTML = `Watch it on ${movie.service}`;
   }
 
   function postRestaurantInfo(restaurant) {

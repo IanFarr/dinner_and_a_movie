@@ -22,7 +22,6 @@ function get(service, genre, page) {
   };
 
   return axios.request(options).then(res => res.data);
-  // return axios.request(options).then(res => res.response);
 }
 
 // sugar: can also be {get: get}
