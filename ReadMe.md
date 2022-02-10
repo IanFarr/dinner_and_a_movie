@@ -39,6 +39,14 @@ work together to provide a seamless single-page experience.
 Two APIs are responsible for delivering the film and local restaurant information that is then presented to the user. API
 calls are performed in the background which allows the app to remain light and provide an uninterrupted user experience.
 
+### A list of the technologies used:
+- Node.js
+- Express Framework
+- Streaming Availability API
+- Trip Advisor API
+- Webpack
+- Axios
+
 ### Handling Randomness
 
 Results are randomly selected based on the criteria that the user inputs. In order to provide relavent results, we need to
