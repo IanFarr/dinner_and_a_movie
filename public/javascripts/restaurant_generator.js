@@ -20,8 +20,8 @@ async function callRestaurantApi(priceSelection, location, postRestaurantInfo, r
     const address = result.address;
     const phoneNumber = result.phone;
     const website = result.web_url;
+    
     let cuisine;
-
     if (typeof result.cuisine[0] === 'undefined') {
       cuisine = "It's a surprise!";
     } else {
