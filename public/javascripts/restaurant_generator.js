@@ -1,6 +1,18 @@
 function generateRandomRestaurant(priceSelections, location, postRestaurantInfo, revealLanding, hideLoader) {
   const priceSelection = getRandomPriceSelection(priceSelections);
-  callRestaurantApi(priceSelection, location, postRestaurantInfo, revealLanding, hideLoader);
+  if (location !== null) {
+    callRestaurantApi(priceSelection, location, postRestaurantInfo, revealLanding, hideLoader);
+  } else {
+    postRestaurantInfo(
+      { 
+        name: 'Location Required for Restaurant', 
+        cuisine: '', 
+        address: '', 
+        phoneNumber: '', 
+        website: '', 
+        street: '', 
+        city: '' })
+  }
 }
 
 function getRandomPriceSelection(priceSelections) {

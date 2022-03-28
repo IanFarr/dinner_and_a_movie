@@ -59,8 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
         generateRandomRestaurant(priceSelections, location, postRestaurantInfo, revealLanding, hideLoader);
       })
       .catch(function (err) {
-        generateRandomMovie(streamSelections, genreSelections, null, postMovieInfo);
-        generateRandomRestaurant(priceSelections, null, noLocation);
+        console.log(err);
+        generateRandomMovie(streamSelections, genreSelections, null, postMovieInfo, revealLanding, hideLoader);
+        generateRandomRestaurant(priceSelections, null, postRestaurantInfo, revealLanding, hideLoader);
       });
 
 
@@ -69,13 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition((location) => {
             resolve(location);
-          }
-          );
-        } else {
-          reject(err)
+          }, error => reject(error));
         }
       });
-
       return promise;
     }
   });
