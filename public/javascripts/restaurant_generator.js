@@ -26,12 +26,48 @@ async function callRestaurantApi(priceSelection, location, postRestaurantInfo, r
 
   await axios.post('/api/restaurants', { "price": priceSelection.price, "lat": location.coords.latitude, "long": location.coords.longitude }).then(function (response) {
     const result = response.data.data[Math.floor(Math.random() * 30)];
-    const name = result.name;
-    const street = result.address_obj.street1;
-    const city = result.address_obj.city;
-    const address = result.address;
-    const phoneNumber = result.phone;
-    const website = result.web_url;
+
+    let name;
+    if (result.name === undefined) {
+      name = "Not Available";
+    } else {
+      name = result.name;
+    }
+
+    let street;
+    if (result.address_obj.street1 === undefined) {
+      street = "Not Available";
+    } else {
+      street = result.address_obj.street1;
+    }
+
+    let city;
+    if (result.address_obj.city === undefined) {
+      city = "Not Available";
+    } else {
+      city = result.address_obj.city;
+    }
+
+    let address;
+    if (result.address === undefined) {
+      address = "Not Available";
+    } else {
+      address = result.address;
+    }
+
+    let phoneNumber;
+    if (result.phone === undefined) {
+      phoneNumber = "Not Available";
+    } else {
+      phoneNumber = result.phone;
+    }
+    
+    let website;
+    if (result.web_url === undefined) {
+      website = "Not Available";
+    } else {
+      website = result.web_url;
+    }
     
     let cuisine;
     if (typeof result.cuisine[0] === 'undefined') {
